@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {NavLink} from 'react-router-dom';
 
+
 export default class MenuProductos extends Component {
   render() {
     return (
@@ -14,6 +15,9 @@ export default class MenuProductos extends Component {
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link active" aria-current="page" to="/productos">Productos</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/crear">Nuevo Producto</NavLink>
