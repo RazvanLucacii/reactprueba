@@ -47,7 +47,7 @@ export default class CrearProductos extends Component {
 
   render() {
     if(this.state.status === true){
-      return (<Navigate to="/productos"/>)
+      return (<Navigate to="/productos" />)
     }else{
       return (
         <div className='container'>
@@ -65,7 +65,6 @@ export default class CrearProductos extends Component {
               Crear Producto
             </button>
           </form>
-          
         </div>
       )
     }

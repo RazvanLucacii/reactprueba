@@ -10,13 +10,18 @@ import MenuProductos from './MenuProductos';
 
 export default class Router extends Component {
     render() {
+        function DetalleProductoElement(){
+            var { id } = useParams();
+            return(<DetallesProductos id={id}/>)
+        }
+
         return(
             <BrowserRouter>
                 <MenuProductos />
                 <Routes>
                     <Route path="/" element={<HomeComponent />} />
                     <Route path="/productos" element={<ProductosComponet />} />
-                    <Route path="/detalles/:id" element={<DetallesProductos />} />
+                    <Route path="/detalles/:id" element={<DetalleProductoElement />} />
                     <Route path="/modificar/:id" element={<ModificarProducto />} />
                     <Route path="/eliminar/:id" element={<EliminarProductos />} />
                     <Route path="/crear" element={<CrearProductos />} />
