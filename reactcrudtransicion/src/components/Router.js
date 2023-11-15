@@ -15,6 +15,16 @@ export default class Router extends Component {
             return(<DetallesProductos id={id}/>)
         }
 
+        function UpdateProductoElement (){
+            var { id } = useParams();
+            return <ModificarProducto id={id}/>
+        }
+
+        function EliminarProductoElement() {
+            var { id } = useParams();
+            return <EliminarProductos id={id} />
+        }
+
         return(
             <BrowserRouter>
                 <MenuProductos />
@@ -22,8 +32,8 @@ export default class Router extends Component {
                     <Route path="/" element={<HomeComponent />} />
                     <Route path="/productos" element={<ProductosComponet />} />
                     <Route path="/detalles/:id" element={<DetalleProductoElement />} />
-                    <Route path="/modificar/:id" element={<ModificarProducto />} />
-                    <Route path="/eliminar/:id" element={<EliminarProductos />} />
+                    <Route path="/modificar/:id" element={<UpdateProductoElement />} />
+                    <Route path="/eliminar/:id" element={<EliminarProductoElement />} />
                     <Route path="/crear" element={<CrearProductos />} />
                 </Routes>
             </BrowserRouter>
